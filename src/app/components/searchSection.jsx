@@ -1,12 +1,13 @@
 import SearchIcon from "./searchIcon";
 import Searchbar from "./searchbar";
+import Form from "next/form";
 
 const SearchSection = () => {
   return (
-    <div className="grid grid-cols-[auto_1fr] items-center gap-4 mb-6">
+    <Form className="mb-6 grid grid-cols-[auto_1fr] items-center gap-4">
       <SearchIcon />
       <Searchbar />
-    </div>
+    </Form>
   );
 };
 
