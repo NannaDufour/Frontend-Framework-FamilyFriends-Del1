@@ -1,16 +1,17 @@
+"use client";
 import { FiStar } from "react-icons/fi";
+import { addFavourite } from "../action/actions";
 
-const Favourite = ({ active = false }) => {
+const Favourite = ({ id, breed }) => {
   return (
-    <button
-      aria-label={active ? "Remove from favourites" : "Add to favourites"}
-      aria-pressed={active}
-      className="rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral"
-    >
+    <button>
       <FiStar
-        className={`h-10 w-10 rounded-full bg-white/30 p-2 text-white ${
-          active ? "fill-white" : "fill-none"
-        }`}
+        className={`h-10 w-10 rounded-full bg-white/30 p-2 text-white`}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          addFavourite(id);
+        }}
       />
     </button>
   );

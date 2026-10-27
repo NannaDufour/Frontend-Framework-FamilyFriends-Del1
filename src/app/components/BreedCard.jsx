@@ -3,7 +3,7 @@ import Link from "next/link";
 import Textinfo from "./TextInfo";
 import Favourite from "./Favourite";
 
-const BreedCard = ({ id, name, country, image, favourite = false }) => {
+const BreedCard = ({ id, name, country, image, favouriteID }) => {
   return (
     <article className="breed-card">
       <Link
@@ -21,7 +21,7 @@ const BreedCard = ({ id, name, country, image, favourite = false }) => {
           />
 
           <div className="absolute top-3 right-3">
-            <Favourite active={favourite} />
+            <Favourite id={favouriteID} />
           </div>
         </div>
         <Textinfo breed={name} country={country} />

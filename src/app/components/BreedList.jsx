@@ -22,6 +22,7 @@ const BreedList = async ({ searchParams }) => {
             name={breed.name}
             country={breed.origin}
             image={breed.image?.url ?? "/dummydog.jpg"}
+            favouriteID={breed.image.id}
           />
         </div>
       ))}

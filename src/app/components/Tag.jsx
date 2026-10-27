@@ -8,7 +8,7 @@ const variants = {
 const Tag = ({ label, color = "blue" }) => {
   return (
     <span
-      className={`block whitespace-nowrap rounded-full px-4 py-2 text-sm ${variants[color]}`}
+      className={`block whitespace-nowrap rounded-full px-4 py-2 text-sm capitalize ${variants[color]}`}
     >
       {label}
     </span>
