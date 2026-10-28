@@ -3,7 +3,7 @@ import Favourite from "./Favourite";
 import BackArrow from "./BackArrow";
 import BreedBadge from "./BreedBadge";
 
-const DetailFavourite = ({ name, image, thumbnail, favourite = false }) => {
+const DetailFavourite = ({ name, image, thumbnail, imageId, favouriteId }) => {
   return (
     <div className="relative">
       <Image
@@ -17,7 +17,7 @@ const DetailFavourite = ({ name, image, thumbnail, favourite = false }) => {
         <BackArrow />
       </div>
       <div className="absolute top-3 right-3">
-        <Favourite active={favourite} />
+        <Favourite imageId={imageId} favouriteId={favouriteId} />
       </div>
       <div className="absolute bottom-3 left-3 right-3">
         <div className="w-fit max-w-full">

@@ -8,7 +8,7 @@ const BreedBadge = ({ name, thumbnail }) => {
         src={thumbnail}
         width={48}
         height={48}
-        alt="photoOfChoosenDog"
+        alt="photoOfDog"
       />
       <span className="min-w-0 text-lg text-white break-words">{name}</span>
     </div>
